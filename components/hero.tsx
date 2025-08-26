@@ -57,7 +57,7 @@ export function Hero() {
           className="flex justify-center space-x-6 mb-12"
         >
           <a
-            href="https://github.com/ishitagupta"
+            href="https://github.com/IshitaGupta2892"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -65,7 +65,7 @@ export function Hero() {
             <Github className="h-6 w-6" />
           </a>
           <a
-            href="https://linkedin.com/in/ishitagupta"
+            href="https://linkedin.com/in/ishitagupta4048"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -73,7 +73,7 @@ export function Hero() {
             <Linkedin className="h-6 w-6" />
           </a>
           <a
-            href="mailto:ishita.gupta@email.com"
+            href="mailto:ishitagupta2982@email.com"
             className="text-muted-foreground hover:text-primary transition-colors duration-200"
           >
             <Mail className="h-6 w-6" />
