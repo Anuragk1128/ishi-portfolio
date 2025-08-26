@@ -69,7 +69,7 @@ export function Skills() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-16">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -78,7 +78,7 @@ export function Skills() {
               transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card>
+              <Card className="h-full flex flex-col">
                 <CardHeader>
                   <CardTitle className="text-xl">{category.title}</CardTitle>
                 </CardHeader>
