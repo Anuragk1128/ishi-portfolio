@@ -3,75 +3,92 @@
 
 @custom-variant dark (&:is(.dark *));
 
+:root,
+.dark {
+  /* Allow smooth interpolation of hue via CSSOM changes */
+}
+
+/* Register animatable custom properties */
+@property --theme-hue {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
 :root {
-  --background: oklch(1 0 0);
+  /* Light background follows theme hue (soft lightness for readability) */
+  --background: hsl(var(--theme-hue) 90% 97%);
   --foreground: oklch(0.35 0 0);
   --card: oklch(0.97 0 0);
   --card-foreground: oklch(0.35 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.35 0 0);
-  --primary: oklch(0.45 0.15 160);
+  /* Theme hue in degrees: 0 (red) -> 240 (blue) */
+  --theme-hue: 0;
+  /* Drive primary/accent/ring via the hue so we can animate */
+  --primary: hsl(var(--theme-hue) 85% 50%);
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.35 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.45 0 0);
-  --accent: oklch(0.55 0.15 160);
+  --accent: hsl(calc(var(--theme-hue) + 20) 85% 54%);
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
   --border: oklch(0.9 0 0);
   --input: oklch(1 0 0);
-  --ring: oklch(0.45 0.15 160 / 0.5);
-  --chart-1: oklch(0.45 0.15 160);
-  --chart-2: oklch(0.55 0.15 160);
+  --ring: hsl(var(--theme-hue) 85% 50% / 0.5);
+  --chart-1: hsl(var(--theme-hue) 85% 50%);
+  --chart-2: hsl(calc(var(--theme-hue) + 15) 85% 55%);
   --chart-3: oklch(0.35 0 0);
   --chart-4: oklch(0.97 0 0);
   --chart-5: oklch(0.65 0.2 50);
   --radius: 0.5rem;
   --sidebar: oklch(1 0 0);
   --sidebar-foreground: oklch(0.35 0 0);
-  --sidebar-primary: oklch(0.45 0.15 160);
+  --sidebar-primary: hsl(var(--theme-hue) 85% 50%);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.55 0.15 160);
+  --sidebar-accent: hsl(calc(var(--theme-hue) + 20) 85% 54%);
   --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0.9 0 0);
-  --sidebar-ring: oklch(0.45 0.15 160 / 0.5);
+  --sidebar-ring: hsl(var(--theme-hue) 85% 50% / 0.5);
 }
 
 .dark {
-  --background: oklch(0.08 0 0);
+  /* Dark background also follows hue (very low lightness) */
+  --background: hsl(var(--theme-hue) 40% 10%);
   --foreground: oklch(0.95 0 0);
   --card: oklch(0.12 0 0);
   --card-foreground: oklch(0.95 0 0);
   --popover: oklch(0.08 0 0);
   --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.55 0.15 160);
+  --primary: hsl(var(--theme-hue) 80% 60%);
   --primary-foreground: oklch(0.08 0 0);
   --secondary: oklch(0.15 0 0);
   --secondary-foreground: oklch(0.95 0 0);
   --muted: oklch(0.15 0 0);
   --muted-foreground: oklch(0.65 0 0);
-  --accent: oklch(0.6 0.15 160);
+  --accent: hsl(calc(var(--theme-hue) + 20) 80% 60%);
   --accent-foreground: oklch(0.08 0 0);
   --destructive: oklch(0.55 0.2 25);
   --destructive-foreground: oklch(0.95 0 0);
   --border: oklch(0.15 0 0);
   --input: oklch(0.15 0 0);
-  --ring: oklch(0.55 0.15 160 / 0.5);
-  --chart-1: oklch(0.55 0.15 160);
-  --chart-2: oklch(0.6 0.15 160);
+  --ring: hsl(var(--theme-hue) 80% 60% / 0.5);
+  --chart-1: hsl(var(--theme-hue) 80% 60%);
+  --chart-2: hsl(calc(var(--theme-hue) + 15) 80% 62%);
   --chart-3: oklch(0.65 0 0);
   --chart-4: oklch(0.15 0 0);
   --chart-5: oklch(0.7 0.2 50);
   --sidebar: oklch(0.08 0 0);
   --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.55 0.15 160);
+  --sidebar-primary: hsl(var(--theme-hue) 80% 60%);
   --sidebar-primary-foreground: oklch(0.08 0 0);
-  --sidebar-accent: oklch(0.6 0.15 160);
+  --sidebar-accent: hsl(calc(var(--theme-hue) + 20) 80% 60%);
   --sidebar-accent-foreground: oklch(0.08 0 0);
   --sidebar-border: oklch(0.15 0 0);
-  --sidebar-ring: oklch(0.55 0.15 160 / 0.5);
+  --sidebar-ring: hsl(var(--theme-hue) 80% 60% / 0.5);
 }
 
 @theme inline {
@@ -122,4 +139,19 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* A full-screen overlay to display the red→blue gradient while animating */
+.theme-gradient-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0;
+  background: linear-gradient(90deg, hsl(0 100% 50%), hsl(240 100% 50%));
+  transition: opacity 200ms ease;
+}
+
+.theme-gradient-overlay.active {
+  opacity: 0.25; /* subtle wash while changing */
 }

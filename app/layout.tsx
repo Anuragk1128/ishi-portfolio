@@ -18,6 +18,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         {children}
+        {/* Overlay used to visualize the red→blue gradient during theme rotation */}
+        <div className="theme-gradient-overlay" />
       </body>
     </html>
   )

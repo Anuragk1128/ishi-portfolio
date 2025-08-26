@@ -7,6 +7,7 @@ import { Achievements } from "@/components/achievements"
 import { Experience } from "@/components/experience"
 import { Contact } from "@/components/contact"
 import { Navigation } from "@/components/navigation"
+import { ThemeRotator } from "@/components/theme-rotator"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Projects />
       <Achievements />
       <Contact />
+      <ThemeRotator />
     </main>
   )
 }
