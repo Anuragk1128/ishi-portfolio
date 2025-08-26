@@ -8,38 +8,35 @@ import { Calendar, MapPin } from "lucide-react"
 export function Experience() {
   const experiences = [
     {
-      title: "DevOps Engineer Trainee",
-      company: "Tech Solutions Inc.",
-      location: "Remote",
-      duration: "Jan 2024 - Present",
+      title: "Graduate Engineer Trainee (CI/CD)",
+      company: "Landis+Gyr",
+      location: "Noida, India",
+      duration: "Mar 2025 – Present",
       description: [
-        "Implemented CI/CD pipelines using Jenkins and GitLab CI, reducing deployment time by 40%",
-        "Managed containerized applications using Docker and Kubernetes in AWS EKS",
-        "Automated infrastructure provisioning using Terraform and Ansible",
-        "Set up monitoring and alerting systems using Prometheus and Grafana",
-        "Collaborated with development teams to optimize application performance and reliability",
+        "Worked in the CI/CD team, managing and optimizing build and deployment pipelines",
+        "Hands-on with GitLab, Jenkins, Gerrit, SonarQube, and Mend",
+        "Contributed to automation and pipeline improvements for smoother integration and faster delivery",
+        "Collaborated with developers to troubleshoot CI/CD issues and improved pipeline reliability by 25%",
       ],
-      technologies: ["AWS", "Docker", "Kubernetes", "Jenkins", "Terraform", "Ansible", "Prometheus", "Grafana"],
+      technologies: ["GitLab", "Jenkins", "Gerrit", "SonarQube", "Mend", "AWS", "Docker"],
     },
     {
-      title: "Cloud Infrastructure Intern",
-      company: "CloudTech Startup",
-      location: "Bangalore, India",
-      duration: "Sep 2023 - Dec 2023",
+      title: "Apprentice",
+      company: "WNS Global Services Pvt. Ltd.",
+      location: "Gurugram, India",
+      duration: "Jun 2022 – Sep 2023",
       description: [
-        "Assisted in migrating legacy applications to AWS cloud infrastructure",
-        "Learned and implemented Infrastructure as Code practices using CloudFormation",
-        "Supported the team in setting up automated backup and disaster recovery solutions",
-        "Gained hands-on experience with AWS services including EC2, S3, RDS, and VPC",
+        "Created presentations in PowerPoint and Google Slides aligned with BCG brand guidelines",
+        "Translated complex data into clear visuals through custom graphics and diagrams",
+        "Managed multiple projects, ensuring accuracy, consistency, and on-time delivery",
       ],
-      technologies: ["AWS", "CloudFormation", "EC2", "S3", "RDS", "VPC", "Lambda"],
+      technologies: ["PowerPoint", "Google Slides", "Canva", "Communication", "Project Management"],
     },
   ]
 
   const certifications = [
-    "AWS Cloud Practitioner (In Progress)",
-    "Docker Certified Associate (Planned)",
-    "Kubernetes Administrator (CKA) - Studying",
+    "AWS Cloud Practitioner Essentials - Coursera (May 2023)",
+    "Agile Methodology Virtual Experience Program - Forage (May 2023)",
   ]
 
   return (

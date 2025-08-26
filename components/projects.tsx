@@ -9,40 +9,22 @@ import { ExternalLink, Github } from "lucide-react"
 export function Projects() {
   const projects = [
     {
-      title: "Microservices Deployment Pipeline",
+      title: "Food Ordering System",
       description:
-        "Built a complete CI/CD pipeline for a microservices architecture using Jenkins, Docker, and Kubernetes. Implemented automated testing, security scanning, and deployment strategies.",
-      technologies: ["Jenkins", "Docker", "Kubernetes", "AWS EKS", "Helm", "SonarQube"],
-      github: "https://github.com/ishitagupta/microservices-pipeline",
-      demo: "https://demo.microservices-pipeline.com",
-      image: "/placeholder-s74eo.png",
-    },
-    {
-      title: "Infrastructure as Code with Terraform",
-      description:
-        "Designed and implemented scalable AWS infrastructure using Terraform modules. Includes VPC, EKS cluster, RDS, and monitoring setup with automated provisioning.",
-      technologies: ["Terraform", "AWS", "VPC", "EKS", "RDS", "CloudWatch"],
-      github: "https://github.com/ishitagupta/terraform-aws-infrastructure",
+        "A hassle-free solution for ordering food online, offering users the convenience of accessing both restaurant meals and mess services through a single platform.",
+      technologies: ["C++", "OOPs", "Data Structures", "STL"],
+      github: null,
       demo: null,
       image: "/placeholder-aun60.png",
     },
     {
-      title: "Monitoring Stack Setup",
+      title: "Tour and Travel Management System",
       description:
-        "Deployed comprehensive monitoring solution using Prometheus, Grafana, and AlertManager. Created custom dashboards and alerting rules for application and infrastructure monitoring.",
-      technologies: ["Prometheus", "Grafana", "AlertManager", "Docker", "Kubernetes"],
-      github: "https://github.com/ishitagupta/monitoring-stack",
-      demo: "https://monitoring.ishitagupta.dev",
-      image: "/placeholder-40sao.png",
-    },
-    {
-      title: "Automated Backup Solution",
-      description:
-        "Developed automated backup and disaster recovery solution for databases and applications. Implemented cross-region replication and automated testing of backup integrity.",
-      technologies: ["Python", "AWS S3", "Lambda", "CloudFormation", "Bash"],
-      github: "https://github.com/ishitagupta/automated-backup",
+        "System to efficiently manage bookings, itineraries, and customer interactions in a streamlined tour and travel management workflow.",
+      technologies: ["AWS", "HTML", "CSS", "JavaScript", "MongoDB"],
+      github: null,
       demo: null,
-      image: "/placeholder-4jnth.png",
+      image: "/placeholder-40sao.png",
     },
   ]
 
@@ -92,17 +74,19 @@ export function Projects() {
                     ))}
                   </div>
                   <div className="flex gap-2">
-                    <Button variant="outline" size="sm" asChild className="flex-1 bg-transparent">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center"
-                      >
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </a>
-                    </Button>
+                    {project.github && (
+                      <Button variant="outline" size="sm" asChild className="flex-1 bg-transparent">
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center"
+                        >
+                          <Github className="h-4 w-4 mr-2" />
+                          Code
+                        </a>
+                      </Button>
+                    )}
                     {project.demo && (
                       <Button size="sm" asChild className="flex-1">
                         <a

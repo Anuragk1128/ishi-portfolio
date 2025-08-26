@@ -8,53 +8,49 @@ import { Badge } from "@/components/ui/badge"
 export function Skills() {
   const skillCategories = [
     {
-      title: "Cloud Platforms",
+      title: "Programming & Markup",
       skills: [
-        { name: "AWS", level: 75 },
-        { name: "Azure", level: 65 },
-        { name: "Google Cloud", level: 50 },
+        { name: "Java", level: 75 },
+        { name: "Python", level: 65 },
+        { name: "HTML", level: 80 },
       ],
     },
     {
-      title: "DevOps Tools",
+      title: "DevOps & CI/CD",
       skills: [
-        { name: "Docker", level: 80 },
-        { name: "Kubernetes", level: 70 },
         { name: "Jenkins", level: 75 },
-        { name: "GitLab CI/CD", level: 70 },
+        { name: "GitLab", level: 70 },
+        { name: "GitHub", level: 70 },
+        { name: "SonarQube", level: 65 },
+        { name: "Gerrit", level: 60 },
+        { name: "Mend", level: 60 },
       ],
     },
     {
-      title: "Infrastructure as Code",
+      title: "Cloud & Containerization",
       skills: [
-        { name: "Terraform", level: 75 },
-        { name: "Ansible", level: 65 },
-        { name: "CloudFormation", level: 60 },
+        { name: "AWS", level: 70 },
+        { name: "Docker", level: 75 },
+        { name: "Linux", level: 70 },
       ],
     },
     {
-      title: "Monitoring & Logging",
+      title: "Databases",
       skills: [
-        { name: "Prometheus", level: 65 },
-        { name: "Grafana", level: 70 },
-        { name: "ELK Stack", level: 60 },
+        { name: "MySQL", level: 65 },
+        { name: "PostgreSQL", level: 60 },
       ],
     },
   ]
 
   const technologies = [
-    "Linux",
-    "Python",
+    "VS Code",
+    "Notepad++",
     "Bash",
     "Git",
     "YAML",
     "JSON",
-    "Nginx",
-    "Apache",
-    "MySQL",
-    "PostgreSQL",
-    "Redis",
-    "MongoDB",
+    "Agile Methodologies",
   ]
 
   return (

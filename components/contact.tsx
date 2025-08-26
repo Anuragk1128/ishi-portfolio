@@ -36,7 +36,7 @@ export function Contact() {
     {
       icon: <Mail className="h-5 w-5" />,
       label: "Email",
-      value: "ishita.gupta@email.com",
+      value: "ishitagupta2982@email.com",
       href: "mailto:ishitagupta2982@email.com",
     },
     {

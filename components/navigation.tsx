@@ -33,7 +33,7 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {["About", "Skills", "Experience", "Projects", "Contact"].map((item) => (
+            {["About", "Skills", "Experience", "Education", "Projects", "Achievements", "Contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -54,7 +54,7 @@ export function Navigation() {
         {isOpen && (
           <div className="md:hidden bg-background border-t">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {["About", "Skills", "Experience", "Projects", "Contact"].map((item) => (
+              {["About", "Skills", "Experience", "Education", "Projects", "Achievements", "Contact"].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}

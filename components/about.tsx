@@ -35,9 +35,10 @@ export function About() {
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">About Me</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            I'm a dedicated DevOps Engineer Trainee with 7 months of experience in cloud technologies, automation, and
-            infrastructure management. My journey in DevOps began with a passion for bridging the gap between
-            development and operations teams.
+            I have a foundation in Java, SQL, Docker, and Linux, with hands-on experience deploying and managing
+            applications on AWS Cloud. I'm eager to apply my knowledge in real-world projects, learn from experienced
+            professionals, and contribute to building efficient solutions while continuously enhancing my technical
+            skills.
           </p>
         </motion.div>
 
@@ -50,18 +51,16 @@ export function About() {
           >
             <h3 className="text-2xl font-semibold mb-6">My Journey</h3>
             <p className="text-muted-foreground mb-4">
-              Starting my career in DevOps has been an exciting adventure. Over the past 7 months, I've immersed myself
-              in learning cloud platforms, containerization technologies, and automation tools that are essential in
-              modern software development.
+              I've worked across CI/CD and cloud environments, focusing on automating builds, deployments, and improving
+              reliability. I enjoy translating complex problems into simple, scalable solutions.
             </p>
             <p className="text-muted-foreground mb-4">
-              I believe in the power of continuous learning and staying updated with the latest industry trends. My goal
-              is to contribute to building robust, scalable, and efficient infrastructure that enables teams to deliver
-              high-quality software faster.
+              I value mentorship and continuous learning and I'm actively expanding my skills in backend, DevOps, and
+              cloud infrastructure to deliver business impact.
             </p>
             <p className="text-muted-foreground">
-              When I'm not working on DevOps projects, you can find me exploring new technologies, contributing to
-              open-source projects, or sharing my learning journey with the community.
+              Outside of work, I explore new tools, deepen my cloud knowledge, and refine my problem-solving and
+              communication skills.
             </p>
           </motion.div>
 
