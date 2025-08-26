@@ -59,6 +59,9 @@ export function Projects() {
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <CardHeader>

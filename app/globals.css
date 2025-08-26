@@ -141,17 +141,9 @@
   }
 }
 
-/* A full-screen overlay to display the red→blue gradient while animating */
-.theme-gradient-overlay {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 50;
-  opacity: 0;
-  background: linear-gradient(90deg, hsl(0 100% 50%), hsl(240 100% 50%));
-  transition: opacity 200ms ease;
+/* Ensure anchored sections are not hidden under the fixed header */
+html {
+  scroll-padding-top: 4.5rem; /* ~72px to cover nav height + spacing */
 }
 
-.theme-gradient-overlay.active {
-  opacity: 0.25; /* subtle wash while changing */
-}
+/* theme-gradient-overlay removed (unused) */
