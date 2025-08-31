@@ -3,10 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-:root,
-.dark {
-  /* Allow smooth interpolation of hue via CSSOM changes */
-}
+/* Allow smooth interpolation of hue via CSSOM changes */
 
 /* Register animatable custom properties */
 @property --theme-hue {
@@ -138,6 +135,17 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  /* Ensure media scale responsively and avoid layout overflow */
+  img, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  /* Avoid accidental horizontal scrolling on small screens */
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
   }
 }
 
